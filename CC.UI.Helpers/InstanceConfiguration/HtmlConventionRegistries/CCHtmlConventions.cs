@@ -36,9 +36,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
             Displays.Builder<DateFormatter>();
             Displays.Builder<TimeFormatter>();
             Displays.If(x => x.Accessor.PropertyType == typeof (DateTime) || x.Accessor.PropertyType == typeof (DateTime?))
-                .BuildBy(
-                    req =>
-                    req.RawValue != null
+                .BuildBy(req => req.RawValue != null
                         ? new HtmlTag("span").Text(DateTime.Parse(req.RawValue.ToString()).ToLongDateString())
                         : new HtmlTag("span"));
             Displays.Always.BuildBy(req => new HtmlTag("span").Text(req.StringValue()));
@@ -64,32 +62,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
                 if (request.Accessor is PropertyChain)
                 {
                     name = ((PropertyChain)(request.Accessor)).PropertyNames.Aggregate((current, next) => current + "." + next);
-//                    if (new InheritsFromDomainEntity().execute(request.Accessor.PropertyType))
-//                        name += ".EntityId";
                 }
-                //var name = request.Accessor.Name.Substring(0, request.Accessor.Name.IndexOf(request.Accessor.FieldName)) + "." + request.Accessor.FieldName; 
-                //tag.Attr("name", name);
                 tag.Attr("name", name);
             }
         }
-        // I understand this is a retarded way to do it but I can't figure it rigt now
-//        private class InheritsFromDomainEntity
-//        {
-//            private bool check(Type type)
-//            {
-//                if (type == typeof(Entity) || type.BaseType == typeof(Entity))
-//                    return true;
-//                return type.BaseType != null && check(type.BaseType);
-//            }
-//
-//            public bool execute(Type type)
-//            {
-//                var result = false;
-//                if (type.BaseType != null)
-//                    result = check(type.BaseType);
-//                return result;
-//            }
-//        }
+
 
         private void numbers()
         {

@@ -79,42 +79,5 @@ namespace CC.UI.Helpers.InstanceConfiguration
             ITagGenerator<T> generator = GetGenerator(helper, expression);
             return new ViewDisplayExpression<T>(generator, expression);
         }
-
-//        public static ViewDisplayDataRangeExpression<T> ViewDisplayDateRangeFor<T>(this HtmlHelper<T> helper, 
-//                                                                            Expression<Func<T, object>> expressionFrom,
-//                                                                            Expression<Func<T, object>> expressionTo,
-//                                                                            Expression<Func<T, object>> expressionToPresent = null) where T : class
-//        {
-//            ITagGenerator<T> generator = GetGenerator(helper, expressionFrom);
-//            return new ViewDisplayDataRangeExpression<T>(generator, expressionFrom, expressionTo, expressionToPresent);
-//        }
-
-
-        public static ViewDisplayCityStateExpression<T> ViewDisplayCityStateFor<T>(this HtmlHelper<T> helper,
-                                                                           Expression<Func<T, object>> expressionCity,
-                                                                           Expression<Func<T, object>> expressionState,
-                                                                           Expression<Func<T, object>> expressionZip) where T : class
-        {
-            ITagGenerator<T> generator = GetGenerator(helper, expressionCity);
-            return new ViewDisplayCityStateExpression<T>(generator, expressionCity, expressionState, expressionZip);
-        }
-
-        public static ViewDisplayAddressExpression<T> ViewDisplayAddressFor<T>(this HtmlHelper<T> helper,
-              Expression<Func<T, object>> address) where T : class
-        {
-            ITagGenerator<T> generator = GetGenerator(helper, address);
-            return new ViewDisplayAddressExpression<T>(generator, address);
-        }
-
-
-
-        //public static string ElementNameFor<T>(this HtmlHelper<T> helper, Expression<Func<T, object>> expression) where T : class
-        //{
-        //    var convention = ObjectFactory.Container.GetInstance<IElementNamingConvention>();
-        //    return convention.GetName(typeof(T), expression.ToAccessor());
-        //}
-
     }
-
-    
 }

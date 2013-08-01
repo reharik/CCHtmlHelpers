@@ -5,7 +5,7 @@ using CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries;
 
 namespace CC.UI.Helpers.InstanceConfiguration.Builders
 {
-    public class DateDisplayBuilder2 : ElementBuilder
+    public class DateDisplayBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -16,11 +16,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new HtmlTag("span").Attr("data-bind", "dateString:" + CCHtmlConventions2.DeriveElementName(request));
+            return new HtmlTag("span").Attr("data-bind", "dateString:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 
-    public class TimeDisplayBuilder2 : ElementBuilder
+    public class TimeDisplayBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -31,7 +31,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new HtmlTag("span").Attr("data-bind", "timeString:" + CCHtmlConventions2.DeriveElementName(request));
+            return new HtmlTag("span").Attr("data-bind", "timeString:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 }

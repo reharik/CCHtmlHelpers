@@ -78,33 +78,28 @@
     <Compile Include="HtmlTags\TagList.cs" />
     <Compile Include="HtmlTags\TextboxTag.cs" />
     <Compile Include="InstanceConfiguration\Builders\DatePickerBuilder.cs" />
-    <Compile Include="InstanceConfiguration\Builders\DatePickerBuilder2.cs" />
-    <Compile Include="InstanceConfiguration\Builders\DateTimeDisplayBuilder2.cs" />
+    <Compile Include="InstanceConfiguration\Builders\DatePickerBuilderKO.cs" />
+    <Compile Include="InstanceConfiguration\Builders\DateTimeDisplayBuilderKO.cs" />
     <Compile Include="InstanceConfiguration\Builders\EmailDisplayBuilder.cs" />
     <Compile Include="InstanceConfiguration\Builders\GroupedSelectBuilder.cs" />
-    <Compile Include="InstanceConfiguration\Builders\GroupedSelectBuilder2.cs" />
     <Compile Include="InstanceConfiguration\Builders\ImageFileDisplayBuilder.cs" />
     <Compile Include="InstanceConfiguration\Builders\LinkDisplayBuilder.cs" />
     <Compile Include="InstanceConfiguration\Builders\ListDisplayBuilder.cs" />
-    <Compile Include="InstanceConfiguration\Builders\ListDisplayBuilder2.cs" />
-    <Compile Include="InstanceConfiguration\Builders\SelectFromEnumerationBuilder.cs" />
-    <Compile Include="InstanceConfiguration\Builders\SelectFromEnumerationBuilder2.cs" />
+    <Compile Include="InstanceConfiguration\Builders\ListDisplayBuilderKO.cs" />
+    <Compile Include="InstanceConfiguration\Builders\SelectFromEnumerationBuilderKO.cs" />
     <Compile Include="InstanceConfiguration\Builders\SelectFromIEnumerableBuilder.cs" />
     <Compile Include="InstanceConfiguration\Builders\TextAreaBuilder.cs" />
-    <Compile Include="InstanceConfiguration\Builders\TextAreaBuilder2.cs" />
+    <Compile Include="InstanceConfiguration\Builders\TextAreaBuilderKO.cs" />
     <Compile Include="InstanceConfiguration\Builders\ValidationModifier.cs" />
     <Compile Include="InstanceConfiguration\CCUIHtmlExtensions.cs" />
     <Compile Include="InstanceConfiguration\HtmlConventionRegistries\CCElementNamingConvention.cs" />
     <Compile Include="InstanceConfiguration\HtmlConventionRegistries\CCHtmlConventions.cs" />
-    <Compile Include="InstanceConfiguration\HtmlConventionRegistries\CCHtmlConventions2.cs" />
+    <Compile Include="InstanceConfiguration\HtmlConventionRegistries\CCHtmlConventionsKO.cs" />
     <Compile Include="InstanceConfiguration\HtmlConventionRegistries\CustomTagActionExpressions.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\DropdownInputExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\EditorExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\EditorInputExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\EditorLabelExpression.cs" />
-    <Compile Include="InstanceConfiguration\HtmlExpressions\ViewDisplayAddressExpression.cs" />
-    <Compile Include="InstanceConfiguration\HtmlExpressions\ViewDisplayCityStateExpression.cs" />
-    <Compile Include="InstanceConfiguration\HtmlExpressions\ViewDisplayDateRangeExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\ViewDisplayExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\ViewExpression.cs" />
     <Compile Include="InstanceConfiguration\HtmlExpressions\ViewLabelExpression.cs" />
@@ -116,7 +111,6 @@
     <Compile Include="CoreConfiguration\DefaultHtmlConventions.cs" />
     <Compile Include="CoreConfiguration\ElementBuilder.cs" />
     <Compile Include="CoreConfiguration\ElementRequest.cs" />
-    <Compile Include="CoreConfiguration\HtmlConventionCompiler.cs" />
     <Compile Include="CoreConfiguration\IElementBuilder.cs" />
     <Compile Include="CoreConfiguration\IElementModifier.cs" />
     <Compile Include="CoreConfiguration\IElementNamingConvention.cs" />
@@ -143,7 +137,6 @@
     <Compile Include="TagConfiguration\TagFactoryExpression.cs" />
     <Compile Include="TagConfiguration\TagGenerator.cs" />
     <Compile Include="TagConfiguration\TagProfile.cs" />
-    <Compile Include="TagConfiguration\TagProfileContainer.cs" />
     <Compile Include="TagConfiguration\TagProfileExpression.cs" />
   </ItemGroup>
   <ItemGroup>

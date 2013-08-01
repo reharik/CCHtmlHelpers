@@ -7,7 +7,7 @@ using CC.UI.Helpers.InstanceConfiguration.Tags;
 
 namespace CC.UI.Helpers.InstanceConfiguration.Builders
 {
-    public class TextboxBuilder2 : ElementBuilder
+    public class TextboxBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -16,11 +16,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new TextboxTag().Attr("data-bind", "value:" + CCHtmlConventions2.DeriveElementName(request));
+            return new TextboxTag().Attr("data-bind", "value:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 
-    public class DatePickerBuilder2 : ElementBuilder
+    public class DatePickerBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -31,11 +31,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new TextboxTag().Attr("data-bind", "dateString:" + CCHtmlConventions2.DeriveElementName(request)).AddClass("datePicker");
+            return new TextboxTag().Attr("data-bind", "dateString:" + CCHtmlConventionsKO.DeriveElementName(request)).AddClass("datePicker");
         }
     }
 
-    public class TimePickerBuilder2 : ElementBuilder
+    public class TimePickerBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -46,11 +46,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new TextboxTag().Attr("data-bind", "timeString:" + CCHtmlConventions2.DeriveElementName(request)).AddClass("timePicker");
+            return new TextboxTag().Attr("data-bind", "timeString:" + CCHtmlConventionsKO.DeriveElementName(request)).AddClass("timePicker");
         }
     }
 
-    public class ImageBuilder2 : ElementBuilder
+    public class ImageBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -61,12 +61,12 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
         public override HtmlTag Build(ElementRequest request)
         {
             return new HtmlTag("img").Attr("data-bind",
-                " attr: { src: " + CCHtmlConventions2.DeriveElementName(request) + " }")
+                " attr: { src: " + CCHtmlConventionsKO.DeriveElementName(request) + " }")
                 .Attr("alt", request.Accessor.FieldName);
         }
     }
 
-    public class CheckboxBuilder2 : ElementBuilder
+    public class CheckboxBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -76,11 +76,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
         public override HtmlTag Build(ElementRequest request)
         {
             return new CheckboxTag(false).Attr("data-bind",
-                                          "checked:" + CCHtmlConventions2.DeriveElementName(request));
+                                          "checked:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 
-    public class PasswordBuilder2 : ElementBuilder
+    public class PasswordBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -89,11 +89,11 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new PasswordTag().Attr("data-bind", "value:" + CCHtmlConventions2.DeriveElementName(request));
+            return new PasswordTag().Attr("data-bind", "value:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 
-    public class EmailDisplayBuilder2 : ElementBuilder
+    public class EmailDisplayBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -103,13 +103,13 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
         public override HtmlTag Build(ElementRequest request)
         {
             HtmlTag root = new HtmlTag("a");
-            root.Attr("data-bind", "attr: { href: mailto:" + CCHtmlConventions2.DeriveElementName(request)+"}");
-            root.Children.Add(new HtmlTag("span").Attr("data-bind", "text:" + CCHtmlConventions2.DeriveElementName(request)));
+            root.Attr("data-bind", "attr: { href: mailto:" + CCHtmlConventionsKO.DeriveElementName(request)+"}");
+            root.Children.Add(new HtmlTag("span").Attr("data-bind", "text:" + CCHtmlConventionsKO.DeriveElementName(request)));
             return root;
         }
     }
 
-    public class MultiSelectBuilder2 : ElementBuilder
+    public class MultiSelectBuilderKO : ElementBuilder
     {
         protected override bool matches(AccessorDef def)
         {
@@ -118,7 +118,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 
         public override HtmlTag Build(ElementRequest request)
         {
-            return new TextboxTag().Id(request.Accessor.Name).AddClass("multiSelect").Attr("data-bind", "MultiSelect:" + CCHtmlConventions2.DeriveElementName(request));
+            return new TextboxTag().Id(request.Accessor.Name).AddClass("multiSelect").Attr("data-bind", "MultiSelect:" + CCHtmlConventionsKO.DeriveElementName(request));
         }
     }
 
@@ -149,7 +149,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
         {
             var container = new HtmlTag("div").AddClass("imageInputContainer");
             var imageContainer = new HtmlTag("div").AddClass("imageContainer");
-            var name = CCHtmlConventions2.DeriveElementName(request);
+            var name = CCHtmlConventionsKO.DeriveElementName(request);
             var thumb = new HtmlTag("img").Attr("data-bind", "attr: { src: " + name + " }").Id("image").Attr("alt", request.Accessor.FieldName);
             var linkImage = new HtmlTag("img").Attr("src",@"/content/images/document.png").Attr("alt", request.Accessor.FieldName);
             var link = new HtmlTag("a").Attr("data-bind", "attr: { href: " + name + "} ").Id("link").Attr("target", "_blank");

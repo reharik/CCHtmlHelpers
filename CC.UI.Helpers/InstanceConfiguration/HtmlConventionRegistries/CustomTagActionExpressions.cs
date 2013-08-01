@@ -6,7 +6,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
 {
     public static class CustomTagActionExpressions
     {
-        public static HtmlTag BuildTextbox2(ElementRequest request)
+        public static HtmlTag BuildTextboxKO(ElementRequest request)
         {
             var date = DateTime.Parse(request.StringValue()).ToShortDateString();
             return new TextboxTag().Attr("value", date).AddClass("datePicker");

@@ -8,9 +8,9 @@ using CC.UI.Helpers.TagConfiguration;
 
 namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
 {
-    public class CCHtmlConventions2 : TagProfileExpression
+    public class CCHtmlConventionsKO : TagProfileExpression
     {
-        public CCHtmlConventions2()
+        public CCHtmlConventionsKO()
         {
             EditorsChain();
             DisplaysChain();
@@ -34,27 +34,27 @@ namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
 
         public virtual void DisplaysChain()
         {
-            Displays.Builder<ImageBuilder2>();
-            Displays.Builder<EmailDisplayBuilder2>();
+            Displays.Builder<ImageBuilderKO>();
+            Displays.Builder<EmailDisplayBuilderKO>();
             Displays.Builder<ListDisplayBuilder>();
-            Displays.Builder<DateDisplayBuilder2>();
-            Displays.Builder<TimeDisplayBuilder2>();
+            Displays.Builder<DateDisplayBuilderKO>();
+            Displays.Builder<TimeDisplayBuilderKO>();
             Displays.Builder<ImageFileDisplayBuilder>();
             Displays.Always.BuildBy(req => new HtmlTag("span").Attr("data-bind", "text:" + DeriveElementName(req)));
         }
 
         public virtual void EditorsChain()
         {
-            Editors.Builder<SelectFromIEnumerableBuilder2>();
-            Editors.Builder<DatePickerBuilder2>();
-//            EditorsChain.Builder<TimePickerBuilder2>();
-            Editors.Builder<CheckboxBuilder2>();
-            Editors.Builder<PasswordBuilder2>();
-            Editors.Builder<MultiSelectBuilder2>();
-//            EditorsChain.Builder<PictureGallery>();
+            Editors.Builder<SelectFromIEnumerableBuilderKO>();
+            Editors.Builder<DatePickerBuilderKO>();
+            Editors.Builder<TimePickerBuilderKO>();
+            Editors.Builder<CheckboxBuilderKO>();
+            Editors.Builder<PasswordBuilderKO>();
+            Editors.Builder<MultiSelectBuilderKO>();
+//          Editors.Builder.Builder<PictureGallery>();
             Editors.Builder<FileUploader>();
             // default builder
-            Editors.Builder<TextboxBuilder2>();
+            Editors.Builder<TextboxBuilderKO>();
             Editors.Always.Modify(AddElementName);
         }
 
@@ -88,8 +88,8 @@ namespace CC.UI.Helpers.InstanceConfiguration.HtmlConventionRegistries
         private void numbers()
         {
             Editors.IfPropertyIs<Int32>().Modify(x=>{if(x.TagName()==new TextboxTag().TagName()) x.Attr("max", Int32.MaxValue);});
-            Editors.IfPropertyIs<Int16>().Modify(x=>{if(x.TagName()==new TextboxTag().TagName()) x.Attr("max", Int16.MaxValue);});
-            //EditorsChain.IfPropertyIs<Int64>().Attr("max", Int64.MaxValue);
+            Editors.IfPropertyIs<Int16>().Modify(x => { if (x.TagName() == new TextboxTag().TagName()) x.Attr("max", Int16.MaxValue); });
+            Editors.IfPropertyIs<Int64>().Modify(x => { if (x.TagName() == new TextboxTag().TagName()) x.Attr("max", Int64.MaxValue); });
             Editors.IfPropertyTypeIs(IsIntegerBased).Modify(x=>{if(x.TagName()==new TextboxTag().TagName()) x.AddClass("integer");});
             Editors.IfPropertyTypeIs(IsFloatingPoint).Modify(x=>{if(x.TagName()==new TextboxTag().TagName()) x.AddClass("number");});
             Editors.IfPropertyTypeIs(IsIntegerBased).Modify(x => { if (x.TagName() == new TextboxTag().TagName()) x.Attr("mask", "wholeNumber"); });

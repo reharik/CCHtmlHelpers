@@ -1,10 +1,10 @@
-using System;
-using CC.UI.Helpers.CoreConfiguration;
-using CC.UI.Helpers.HtmlTags;
-using CC.UI.Helpers.ReflectionHelpers;
+//using System;
+//using CC.UI.Helpers.CoreConfiguration;
+//using CC.UI.Helpers.HtmlTags;
+//using CC.UI.Helpers.ReflectionHelpers;
 
-namespace CC.UI.Helpers.InstanceConfiguration.Builders
-{
+//namespace CC.UI.Helpers.InstanceConfiguration.Builders
+//{
 //    public class RequiredModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -17,7 +17,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class FileRequiredModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -35,9 +35,9 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
-//   
-//
+
+   
+
 //    public class PasswordConfirmModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -50,14 +50,14 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class UrlModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
 //        {
 //            if (!accessorDef.Accessor.HasAttribute<ValidateUrlAttribute>()) return null;
 //            TagModifier modifier = (request, tag) => tag.AddClass(ValidationRule.Url.ToString());
-//            
+            
 ////            TagModifier modifier = (request, tag) =>
 ////                                   tag.AddValidationHelper(ValidationRule.Url + ":true",
 ////                                                           ValidationRule.Url + ": '" +
@@ -65,7 +65,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class EmailModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -80,14 +80,14 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class DateModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
 //        {
 //            if (!accessorDef.Accessor.HasAttribute<ValidateSqlDateTimeAttribute>()) return null;
 //            TagModifier modifier = (request, tag) => tag.AddClass(ValidationRule.Date.ToString());
-//
+
 ////            TagModifier modifier = (request, tag) =>
 ////                                   tag.AddValidationHelper(ValidationRule.Date + ":true",
 ////                                                           ValidationRule.Date + ": '" +
@@ -95,7 +95,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class RangeModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -110,7 +110,7 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return modifier;
 //        }
 //    }
-//
+
 //    public class NumberModifier : IElementModifier
 //    {
 //        public TagModifier CreateModifier(AccessorDef accessorDef)
@@ -139,4 +139,4 @@ namespace CC.UI.Helpers.InstanceConfiguration.Builders
 //            return null;
 //        }
 //    }
-}
+//}

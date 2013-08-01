@@ -17,3 +17,11 @@ C:\Development\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\CC.UI.Helpers
 C:\Development\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.dll
 C:\Development\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.pdb
 C:\Development\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.xml
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\obj\Debug\CC.UI.Helpers.csprojResolveAssemblyReference.cache
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\obj\Debug\CC.UI.Helpers.dll
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\CC.UI.Helpers.dll
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\CC.UI.Helpers.pdb
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.dll
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.pdb
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\bin\Debug\StructureMap.xml
+C:\Dev\CannibalCoder\CCHtmlHelpers\CC.UI.Helpers\obj\Debug\CC.UI.Helpers.pdb

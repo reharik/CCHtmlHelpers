@@ -48,11 +48,6 @@ namespace CC.UI.Helpers.TagConfiguration
             return request;
         }
 
-//        public HtmlTag DisplayFor(Expression<Func<T, object>> expression, string profile)
-//        {
-//            return buildTag(expression, _library[profile].Display);
-//        }
-
         public HtmlTag LabelFor(ElementRequest request)
         {
             return _profile.Label.Build(request);
@@ -73,20 +68,10 @@ namespace CC.UI.Helpers.TagConfiguration
             return buildTag(expression, _profile.Label);
         }
 
-//        public HtmlTag LabelFor(Expression<Func<T, object>> expression, string profile)
-//        {
-//            return buildTag(expression, _library[profile].Label);
-//        }
-
         public HtmlTag InputFor(Expression<Func<T, object>> expression)
         {
             return buildTag(expression, _profile.Editor);
         }
-
-//        public HtmlTag InputFor(Expression<Func<T, object>> expression, string profile)
-//        {
-//            return buildTag(expression, _library[profile].Editor);
-//        }
 
         public HtmlTag DisplayFor(Expression<Func<T, object>> expression)
         {
