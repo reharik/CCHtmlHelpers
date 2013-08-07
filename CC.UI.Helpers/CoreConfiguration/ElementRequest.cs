@@ -44,6 +44,8 @@ namespace CC.UI.Helpers.CoreConfiguration
         public string StringValue()
         {
             if (RawValue == null || RawValue as string == string.Empty) return string.Empty;
+            return RawValue.ToString();
+            // I don't know what this is about. Why do we care if it's nullable or what it's type is?
             var type = RawValue.GetType();
             return type.IsNullable() ? type.GetInnerTypeFromNullable().ToString() : type.ToString();
         }

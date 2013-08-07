@@ -1,0 +1,38 @@
+﻿@using CC.UI.Helpers.InstanceConfiguration
+@model SampleApplication.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+
+@using (Html.BeginForm()) {
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.SubmissionFor(x=>x.UserName).ToHtmlTag()
+            </li>
+            <li>
+                @Html.SubmissionFor(x=>x.Password).ToHtmlTag()
+            </li>
+            <li>
+                @Html.SubmissionFor(x=>x.ConfirmPassword).ToHtmlTag()
+            </li>
+             <li>
+                @Html.SubmissionFor(x=>x.Age).ToHtmlTag()
+            </li>
+        </ol>
+        <input type="submit" value="Register" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+}

@@ -3,6 +3,8 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio 2012
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CC.UI.Helpers", "CC.UI.Helpers\CC.UI.Helpers.csproj", "{0DBFB19C-E106-4807-AA4B-FC8D128A3438}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SampleApplication", "SampleApplication\SampleApplication.csproj", "{6D3471A4-DF48-4DE9-B10D-B536BB3BCF86}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -13,6 +15,10 @@ Global
 		{0DBFB19C-E106-4807-AA4B-FC8D128A3438}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{0DBFB19C-E106-4807-AA4B-FC8D128A3438}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{0DBFB19C-E106-4807-AA4B-FC8D128A3438}.Release|Any CPU.Build.0 = Release|Any CPU
+		{6D3471A4-DF48-4DE9-B10D-B536BB3BCF86}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{6D3471A4-DF48-4DE9-B10D-B536BB3BCF86}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{6D3471A4-DF48-4DE9-B10D-B536BB3BCF86}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{6D3471A4-DF48-4DE9-B10D-B536BB3BCF86}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
